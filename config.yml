@@ -1,0 +1,23 @@
+api_key: A7M3UQ2DNMC6Z250
+database:
+  user: "root"
+  password: "spsrlm14ss"
+  host: "127.0.0.1"
+  port: 3306
+  dbname: "stocks_historical"
+spark:
+  jars_path: "./jar_files/mysql-connector-java-8.0.26.jar"
+companies:
+  - "RELIANCE.BSE"
+  - "TCS.BSE"
+  - "HDFCBANK.BSE"
+  - "INFY.BSE"
+  - "HINDUNILVR.BSE"
+  - "ICICIBANK.BSE"
+  - "KOTAKBANK.BSE"
+  - "SBIN.BSE"
+  - "BHARTIARTL.BSE"
+  - "ITC.BSE"
+date_range:
+  start_date: "2020-01-01"
+  end_date: "2024-05-31"

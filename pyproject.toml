@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "dataengineeringatlys"
+version = "0.1.0"
+description = "Data Engineering Hiring Atlys"
+authors = ["Rohit Goyal <rohitgoyalapg@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyspark = "^3.5.1"
+requests = "^2.32.3"
+pyyaml = "^6.0.1"
+sqlalchemy = "^2.0.31"
+pyodbc = "^5.1.0"
+pymysql = "^1.1.1"
+jaydebeapi = "^1.2.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
