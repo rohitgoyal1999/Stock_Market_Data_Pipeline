@@ -24,7 +24,7 @@ This project is designed to fetch historical stock data for a predefined list of
 ## Steps to Execute
 - Kindly Do Changes in the config.yml files related to the database, companies date range and API Key.
 - Run the following command to execute the ETL process:
-  For historical data:<pre> poetry run python historical_dump.py </pre>
-  For day-to-day data (Note: Day -1 data requires a premium version API key):<pre> poetry run python daily_dump.py </pre>
+  - For historical data:<pre> poetry run python historical_dump.py </pre>
+  - For day-to-day data (Note: Day -1 data requires a premium version API key):<pre> poetry run python daily_dump.py </pre>
    
    
