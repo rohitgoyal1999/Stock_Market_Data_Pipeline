@@ -1,0 +1,36 @@
+-- Company Wise Daily Variation of Prices:
+SELECT 
+    Company,
+    Date,
+    (High - Low) AS DailyVariation
+FROM 
+    historical_stock_data;
+
+
+-- Company Wise Daily Volume Change:
+SELECT 
+    Company,
+    Date,
+    Volume,
+    LAG(Volume, 1) OVER (PARTITION BY Company ORDER BY Date) AS PreviousVolume,
+    (Volume - LAG(Volume, 1) OVER (PARTITION BY Company ORDER BY Date)) AS VolumeChange
+FROM 
+    historical_stock_data;
+
+
+-- Median Daily Variation:
+WITH daily_variations AS (
+    SELECT 
+        Company,
+        Date,
+        (High - Low) AS DailyVariation
+    FROM 
+        historical_stock_data
+)
+SELECT 
+    Company,
+    PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY DailyVariation) AS MedianDailyVariation
+FROM 
+    daily_variations
+GROUP BY 
+    Company;
